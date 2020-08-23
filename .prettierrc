@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "files": "*",
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["*.js", "*.ts"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}
