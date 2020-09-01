@@ -1,6 +1,6 @@
-import * as Transport from "winston-transport";
-import { LogEntry } from "winston";
-import { sendMessage } from "./telegram";
+import Transport from 'winston-transport';
+import { LogEntry } from 'winston';
+import { sendMessage } from './telegram';
 
 type TelegramTransportProps = {
     botToken: string;
@@ -19,7 +19,7 @@ export class TelegramTransport extends Transport {
     }
 
     public log(info: LogEntry, callback: () => void): void {
-        if (info.level === "info") {
+        if (info.level === 'info') {
             callback();
             return;
         }

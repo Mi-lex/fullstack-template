@@ -2,8 +2,8 @@ import {
     createLogger,
     format as _format,
     transports as _transports,
-} from "winston";
-import { TelegramTransport } from "../externalServices/telegram/telegramTransport";
+} from 'winston';
+import { TelegramTransport } from '../externalServices/telegram/telegramTransport';
 
 const { TELEGRAM_CHAT_ID, TELEGRAM_BOT_TOKEN } = process.env;
 
@@ -18,7 +18,7 @@ if (TELEGRAM_CHAT_ID && TELEGRAM_BOT_TOKEN) {
 }
 
 const logger = createLogger({
-    level: "info",
+    level: 'info',
     format: _format.combine(
         _format.timestamp(),
         _format((info) => {
@@ -30,7 +30,7 @@ const logger = createLogger({
     transports,
 });
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
     logger.add(
         new _transports.Console({
             format: _format.simple(),

@@ -1,4 +1,4 @@
-import * as fetch from "isomorphic-fetch";
+import fetch from 'isomorphic-fetch';
 
 interface ISendRequest extends RequestInit {
     url: string;
@@ -16,7 +16,7 @@ export const sendHttpRequest = function sendHttpRequest({
         body: data ? JSON.stringify(data) : undefined,
         ...options as RequestInit,
         headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
             ...headers,
         },
     });
